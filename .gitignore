@@ -1,1 +1,55 @@
+# ============================
+# Arquivos de Build
+# ============================
 /bin/
+/out/
+/target/
+/build/
+
+# ============================
+# Arquivos da IDE
+# ============================
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code (caso alguém use)
+.vscode/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ============================
+# Arquivos temporários do SO
+# ============================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ============================
+# Logs e caches
+# ============================
+*.log
+*.cache
+*.tmp
+*.swp
+
