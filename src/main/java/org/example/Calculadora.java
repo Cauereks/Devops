@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class Calculadora extends JFrame {
     private JTextField campoNumero1, campoNumero2, campoResultado;
-    private JButton botaoSomar, botaoSubtrair, botaoDividir;
+    private JButton botaoSomar, botaoSubtrair, botaoDividir, botaoMultiplicar;
 
     public Calculadora() {
         setTitle("Calculadora");
@@ -26,6 +26,7 @@ public class Calculadora extends JFrame {
         botaoSomar = new JButton("Somar");
         botaoSubtrair = new JButton("Subtrair");
         botaoDividir = new JButton("Dividir");
+        botaoMultiplicar = new JButton("Multiplicar");
 
 //      Função de Somar
         botaoSomar.addActionListener(new ActionListener() {
@@ -47,6 +48,12 @@ public class Calculadora extends JFrame {
                 realizarOperacao("divisao");
             }
         });
+        
+        botaoMultiplicar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                realizarOperacao("multiplicacao");
+            }
+        });
 
         add(label1);
         add(campoNumero1);
@@ -57,6 +64,7 @@ public class Calculadora extends JFrame {
         add(botaoSomar);
         add(botaoSubtrair);
         add(botaoDividir);
+        add(botaoMultiplicar);
 
         setLocationRelativeTo(null);
         setVisible(true);
@@ -81,6 +89,10 @@ public class Calculadora extends JFrame {
                         return;
                     }
                     resultado = num1 / num2;
+                    break;
+                    
+                    case "multiplicacao":
+                    resultado = num1 * num2;
                     break;
             }
 
